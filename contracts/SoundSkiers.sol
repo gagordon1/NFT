@@ -39,4 +39,5 @@ contract SoundSkiers is ERC721Enumerable, Ownable {
     function getCreator() public view returns (address){
       return _creator;
     }
+    
 }
