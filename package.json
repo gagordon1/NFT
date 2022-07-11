@@ -1,0 +1,19 @@
+{
+  "name": "nft",
+  "version": "1.0.0",
+  "description": "create an NFT collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gagordon1/NFT.git"
+  },
+  "author": "Garrett Gordon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gagordon1/NFT/issues"
+  },
+  "homepage": "https://github.com/gagordon1/NFT#readme"
+}
