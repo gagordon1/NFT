@@ -14,10 +14,7 @@ contract CoolCats is ERC721Enumerable, Ownable {
     bool public _paused = true;
 
     // withdraw addresses
-    address t1 = 0xfc86A64a8DE22CF25410F7601AcBd8d6630Da93D;
-    address t2 = 0x4265de963cdd60629d03FEE2cd3285e6d5ff6015;
-    address t3 = 0x1b33EBa79c4DD7243E5a3456fc497b930Db054b2;
-    address t4 = 0x92d79ccaCE3FC606845f3A66c9AeD75d8e5487A9;
+    address t1 = 0x468452829705ACE2579Fef3FAE59333Ac33b1CA8; //test account
 
     // Cool Cats are so cool they dont need a lots of complicated code :)
     // 9999 cats in total, cos cats have 9 lives
@@ -26,9 +23,6 @@ contract CoolCats is ERC721Enumerable, Ownable {
 
         // team gets the first 4 cats
         _safeMint( t1, 0);
-        _safeMint( t2, 1);
-        _safeMint( t3, 2);
-        _safeMint( t4, 3);
     }
 
     function adopt(uint256 num) public payable {
@@ -86,10 +80,7 @@ contract CoolCats is ERC721Enumerable, Ownable {
     }
 
     function withdrawAll() public payable onlyOwner {
-        uint256 _each = address(this).balance / 4;
+        uint256 _each = address(this).balance;
         require(payable(t1).send(_each));
-        require(payable(t2).send(_each));
-        require(payable(t3).send(_each));
-        require(payable(t4).send(_each));
     }
 }
