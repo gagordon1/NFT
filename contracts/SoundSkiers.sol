@@ -11,15 +11,13 @@ contract SoundSkiers is ERC721Enumerable, Ownable {
     string _baseTokenURI;
     uint256 private _reserved = 100;
     uint256 private _price = 0.06 ether;
+    address _creator;
 
-    // withdraw addresses
-    address t1 = 0x468452829705ACE2579Fef3FAE59333Ac33b1CA8; //test account
-
-    constructor(string memory baseURI) ERC721("Sound Skiers", "SKI")  {
+    constructor(string memory baseURI, address _creator) ERC721("Sound Skiers", "SKI")  {
         setBaseURI(baseURI);
-
+        _creator = _creator;
         // team gets the first skier
-        _safeMint( t1, 0);
+        _safeMint( _creator, 0);
     }
     // Just in case Eth does some crazy stuff
     function setPrice(uint256 _newPrice) public onlyOwner() {
@@ -36,5 +34,9 @@ contract SoundSkiers is ERC721Enumerable, Ownable {
 
     function getPrice() public view returns (uint256){
         return _price;
+    }
+
+    function getCreator() public view returns (address){
+      return _creator;
     }
 }
