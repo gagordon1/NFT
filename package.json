@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/gagordon1/NFT/issues"
   },
-  "homepage": "https://github.com/gagordon1/NFT#readme"
+  "homepage": "https://github.com/gagordon1/NFT#readme",
+  "dependencies": {
+    "openzeppelin-solidity": "4.6.0",
+    "web3": "^1.7.4"
+  }
 }
